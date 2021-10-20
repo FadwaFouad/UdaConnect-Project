@@ -1,6 +1,6 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
-default_box = "generic/opensuse42"
+default_box = "roboxes/opensuse15"
 
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
 # configures the configuration version (we support older styles for
@@ -20,10 +20,12 @@ Vagrant.configure("2") do |config|
     master.vm.network 'private_network', ip: "192.168.0.200",  virtualbox__intnet: true
     master.vm.network "forwarded_port", guest: 22, host: 2222, id: "ssh", disabled: true
     master.vm.network "forwarded_port", guest: 22, host: 2000 # Master Node SSH
-    master.vm.network "forwarded_port", guest: 6443, host: 6443 # API Access
-    for p in 30000..30100 # expose NodePort IP's
+    master.vm.network "forwarded_port", guest: 6442, host: 6442 # API Access
+
+    for p in 30010..30100 # expose NodePort IP's
       master.vm.network "forwarded_port", guest: p, host: p, protocol: "tcp"
       end
+    master.vm.synced_folder "./", "/vagrant", type: "virtualbox", create: true
     master.vm.provider "virtualbox" do |v|
       v.memory = "3072"
       v.name = "master"
