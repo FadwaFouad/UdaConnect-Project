@@ -7,8 +7,8 @@ metadata:
 spec:
   ports:
   - name: "5000"
-    port: 5005
-    targetPort: 5005   
+    port: 50051
+    targetPort: 50051   
     nodePort: 30100
   selector:
     service: location-grpc

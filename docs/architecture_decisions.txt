@@ -1,0 +1,15 @@
+			Message Passing Strategies
+
+
+The project API devided into two services Person-API and location-API and with fronted-API is all three services
+
+
+# Rest API 
+in Udaconnect project, i use REST API as major message passing strategy for the project due its easy to use and it's very popular and common message passing technique today, and it's straightforward and simple spectially in case of MVP for the project.
+
+
+# gRPC 
+in location service due its have high volume of requests we use gRPC to improve performane at the expense of less flexibility. and protobufs have a structured data, so the binary data can be decoded very quickly.
+
+# kafka 
+also we use kafka to mange high volume of post requests in order not to avoid losing messages during downtime, improve reliability, and enable decoupling of the system.

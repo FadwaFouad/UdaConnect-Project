@@ -1,0 +1,380 @@
+{
+	"info": {
+		"_postman_id": "84844e89-a757-4e09-aa25-aab44657bd3d",
+		"name": "UdaConnect Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "person-api",
+			"item": [
+				{
+					"name": "person",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:30011/api/persons/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "30011",
+							"path": [
+								"api",
+								"persons",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "person",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:30011/api/persons/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "30011",
+									"path": [
+										"api",
+										"persons",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "103"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/0.16.1 Python/3.7.12"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Dec 2021 15:56:46 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"first_name\": \"Pam\",\n    \"id\": 1,\n    \"company_name\": \"Hampton, Hampton and McQuill\",\n    \"last_name\": \"Trexler\"\n}"
+						}
+					]
+				},
+				{
+					"name": "person",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Fadwa\",\n    \"company_name\": \"Software company\",\n    \"last_name\": \"Fuad\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:30011/api/persons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "30011",
+							"path": [
+								"api",
+								"persons"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "person",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"first_name\": \"Fadwa\",\n    \"company_name\": \"Software company\",\n    \"last_name\": \"Fuad\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:30011/api/persons",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "30011",
+									"path": [
+										"api",
+										"persons"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "90"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/0.16.1 Python/3.7.12"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Dec 2021 15:28:22 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"first_name\": \"Fadwa\",\n    \"id\": 3,\n    \"company_name\": \"Software company\",\n    \"last_name\": \"Fuad\"\n}"
+						}
+					]
+				},
+				{
+					"name": "persons",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:30011/api/persons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "30011",
+							"path": [
+								"api",
+								"persons"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "persons",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:30011/api/persons",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "30011",
+									"path": [
+										"api",
+										"persons"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "489"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/0.16.1 Python/3.7.12"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Dec 2021 15:13:48 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"first_name\": \"Taco\",\n        \"id\": 5,\n        \"company_name\": \"Alpha Omega Upholstery\",\n        \"last_name\": \"Fargo\"\n    },\n    {\n        \"first_name\": \"Frank\",\n        \"id\": 6,\n        \"company_name\": \"USDA\",\n        \"last_name\": \"Shader\"\n    },\n    {\n        \"first_name\": \"Pam\",\n        \"id\": 1,\n        \"company_name\": \"Hampton, Hampton and McQuill\",\n        \"last_name\": \"Trexler\"\n    },\n    {\n        \"first_name\": \"Paul\",\n        \"id\": 8,\n        \"company_name\": \"Paul Badman & Associates\",\n        \"last_name\": \"Badman\"\n    },\n    {\n        \"first_name\": \"Otto\",\n        \"id\": 9,\n        \"company_name\": \"The Chicken Sisters Restaurant\",\n        \"last_name\": \"Spring\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "connection",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:30011/api/persons/5/connection",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "30011",
+							"path": [
+								"api",
+								"persons",
+								"5",
+								"connection"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "connection",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:30011/api/persons/5/connection",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "30011",
+									"path": [
+										"api",
+										"persons",
+										"5",
+										"connection"
+									]
+								}
+							},
+							"status": "BAD REQUEST",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "92"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/0.16.1 Python/3.7.12"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Dec 2021 15:23:28 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The browser (or proxy) sent a request that this server could not understand.\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "location-api",
+			"item": [
+				{
+					"name": "location",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:30004/api/locations/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "30004",
+							"path": [
+								"api",
+								"locations",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "location",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:30004/api/locations/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "30004",
+									"path": [
+										"api",
+										"locations",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "119"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/0.16.1 Python/3.7.12"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Dec 2021 15:11:04 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"latitude\": \"-122.290524\",\n    \"person_id\": 1,\n    \"creation_time\": \"2020-08-18T10:37:06\",\n    \"longitude\": \"37.553441\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

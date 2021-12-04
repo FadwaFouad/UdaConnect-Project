@@ -1,0 +1,25 @@
+		gRPC documentation for UdaConnect project
+		
+if you want to  post new Location  to database you should first deploy kafka in kubernetes because the data will send to kafka first after that data will consume by post location service.
+
+# Delpoy kafka 
+you need to deploy kafka in your cluster. you can use helm or you can follow this tutorial 
+http://www.smartjava.org/content/minimal-kafka-instance-for-k8s/
+
+after that you should create new topic in kafka called 'locations' use this commands 
+
+"kubectl exec -it $kafka_POD_NAME  -- kafka-topics.sh  --create --bootstrap-server $KAFKA_SERVER_Name:PORT   --replication-factor 1 --partitions 1  --topic locations"
+
+# gRPC
+then you can run client.py or if you want to build your own client you should build a protobuf file with this message  
+
+message LocationMessage {
+ int32 person_id = 2;
+ double longitude = 3;
+ double latitude = 4;
+ google.protobuf.Timestamp creation_time = 5;
+}
+
+then build your client and run it on (localhost:30100). 
+
+
