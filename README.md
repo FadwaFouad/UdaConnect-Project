@@ -98,7 +98,7 @@ These pages should also load on your web browser:
 
 
 # gRPC and kafka
-if you want to  post new Location  to database you should deploy kafka in kubernetes and create new topic  `locations` and run client from localhost
+if you want to  post new Location  to database you should deploy kafka in kubernetes and create new topic  `locations` and run client inside pod of lcreate-ocation-grpc useing gRPC to post new Location to Location Service and save in database
 
 ## Configs and Secrets
 In `deployment/db-secret.yaml`, the secret variable is `d293aW1zb3NlY3VyZQ==`. The value is simply encoded and not encrypted -- this is ***not*** secure! Anyone can decode it to see what it is.

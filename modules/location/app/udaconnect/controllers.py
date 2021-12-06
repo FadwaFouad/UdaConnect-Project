@@ -1,13 +1,9 @@
-
-import json
-
 from app.udaconnect.models import Location
 from app.udaconnect.schemas import  LocationSchema
 from app.udaconnect.services import  LocationService
 from flask_accepts import accepts, responds
 from flask_restx import Namespace, Resource
-from kafka import KafkaConsumer
-
+from flask import request
 
 DATE_FORMAT = "%Y-%m-%d"
 
@@ -27,23 +23,8 @@ class LocationResource(Resource):
     @accepts(schema=LocationSchema)
     @responds(schema=LocationSchema)
     def post(self) -> Location:
-
-        # setup for consumer
-        consumer = KafkaConsumer(
-        'locations',
-        bootstrap_servers=['10.43.188.176:9092'],
-        auto_offset_reset='earliest',
-        enable_auto_commit=True,
-        group_id='my-group',
-        max_poll_records=1
-        )
-
-        # get data from consumer
-        location = {}
-        for message in consumer:
-            message = message.value.decode('utf-8')
-            location = json.loads(message)
-            location: Location = LocationService.create(location)
+        request.get_json()
+        location: Location = LocationService.create(request.get_json())
         return location
 
     @responds(schema=LocationSchema)

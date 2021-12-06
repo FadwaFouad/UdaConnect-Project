@@ -373,6 +373,91 @@
 							"body": "{\n    \"id\": 2,\n    \"latitude\": \"-122.290524\",\n    \"person_id\": 1,\n    \"creation_time\": \"2020-08-18T10:37:06\",\n    \"longitude\": \"37.553441\"\n}"
 						}
 					]
+				},
+				{
+					"name": "location",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"person_id\": 1,\n    \"longitude\": \"55\",\n    \"latitude\": \"44.5\",\n    \"creation_time\": \"2021-12-06 05:33:45.045082\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:30004/api/locations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "30004",
+							"path": [
+								"api",
+								"locations"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "location",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"person_id\": 1,\n    \"longitude\": \"55\",\n    \"latitude\": \"44.5\",\n    \"creation_time\": \"2021-12-06 05:33:45.045082\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:30004/api/locations",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "30004",
+									"path": [
+										"api",
+										"locations"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "146"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/0.16.1 Python/3.7.12"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Dec 2021 18:49:06 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"latitude\": \"44.5000000000000000\",\n    \"longitude\": \"55.0000000000000000\",\n    \"person_id\": 1,\n    \"creation_time\": \"2021-12-06T05:33:45.045082\",\n    \"id\": 100\n}"
+						}
+					]
 				}
 			]
 		}
