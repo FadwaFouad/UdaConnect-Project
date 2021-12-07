@@ -11,8 +11,6 @@ after that you should create new topic in kafka called 'locations' use this comm
 "kubectl exec -it $kafka_POD_NAME  -- kafka-topics.sh  --create --bootstrap-server $KAFKA_SERVER_Name:PORT   --replication-factor 1 --partitions 1  --topic locations"
 
 # gRPC
-then you should first run consumer to consume data use this command
-"kubectl exec -it $gRPC_POD_NAME python consumer.py
 
 then you can run client.py inside pod of location-grpc use this command
 "kubectl exec -it $gRPC_POD_NAME python client.py
