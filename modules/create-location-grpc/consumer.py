@@ -23,7 +23,7 @@ def run():
 
     # get data from consumer
     location = {}
-    for message in consumer:
+    while (True):
         message = message.value.decode('utf-8')
         location=location_pb2.LocationMessage()
         Parse(str(message), location)
